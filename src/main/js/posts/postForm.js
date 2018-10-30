@@ -22,8 +22,8 @@ class PostForm extends React.Component {
             })
         }).then(() => {
             this.props.apiCall();
+            this.setState({content: ""});
         });
-
     }
 
     handleChange(event) {
