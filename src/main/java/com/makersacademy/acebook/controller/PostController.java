@@ -2,6 +2,7 @@ package com.makersacademy.acebook.controller;
 
 
 import com.makersacademy.acebook.model.Post;
+import com.makersacademy.acebook.model.User;
 import com.makersacademy.acebook.repository.PostRepository;
 import com.makersacademy.acebook.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,9 @@ public class PostController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/users/{userId}/posts")
+    @PostMapping("/api/users/{userId}/posts")
     public Post addPost(@PathVariable Long userId, @Valid @RequestBody Post post){
-        post.setUser(userRepository.findById(userId));
+        post.setUser(userRepository.findById(userId).get());
         return postRepository.save(post);
     }
 }

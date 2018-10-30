@@ -20,8 +20,7 @@ public class Post {
 
     private String content;
 
-    private Post() {}
-
+    public Post(){}
     public Post(String content) {
         this.content = content;
     }
@@ -30,7 +29,7 @@ public class Post {
     @JoinColumn(name = "user_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
-    private Optional<User> user;
+    private User user;
 
     public Long getId() {
         return id;
@@ -48,11 +47,11 @@ public class Post {
         this.content = content;
     }
 
-    public Optional<User> getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(Optional<User> user) {
+    public void setUser(User user) {
         this.user = user;
     }
 }
