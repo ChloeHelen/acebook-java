@@ -1,24 +1,38 @@
 import React from 'react';
-import Posts from './posts'
+import PostForm from "./postForm";
+import Posts from "./posts";
+
 const client = require('../client');
 
 class PostsBuilder extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {posts: []};
-  }
 
-  componentDidMount() {
-    client({method: 'GET', path: '/api/posts'}).then(response => {
-      this.setState({posts: response.entity._embedded.posts});
-    });
-  }
+    constructor(props) {
+        super(props);
+        this.apiCall = this.apiCall.bind(this)
+        this.state = {
+            posts: []
+        };
+    }
 
-	render() {
-		return (
-      <Posts posts={this.state.posts}/>
-		)
-	}
+    componentDidMount() {
+        this.apiCall();
+    }
+
+    apiCall() {
+        client({method: 'GET', path: '/api/posts'}).then(response => {
+            this.setState({posts: response.entity._embedded.posts});
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <PostForm apiCall={this.apiCall}/>
+                <Posts posts={this.state.posts}/>
+            </div>
+        )
+    }
+
 }
 
 export default PostsBuilder;
