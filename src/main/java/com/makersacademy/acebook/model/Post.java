@@ -21,15 +21,17 @@ public class Post {
     private String content;
 
     public Post(){}
-    public Post(String content) {
+
+    private Post(String content) {
         this.content = content;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private User user;
+//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    // TODO: nullable = false when user login works
+//    @JoinColumn(name = "user_id")
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
+//    private User user;
 
     public Long getId() {
         return id;
@@ -47,11 +49,11 @@ public class Post {
         this.content = content;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

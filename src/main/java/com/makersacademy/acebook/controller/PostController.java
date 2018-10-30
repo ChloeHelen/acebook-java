@@ -22,9 +22,9 @@ public class PostController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/api/users/{userId}/posts")
-    public Post addPost(@PathVariable Long userId, @Valid @RequestBody Post post){
-        post.setUser(userRepository.findById(userId).get());
-        return postRepository.save(post);
-    }
+//    @PostMapping("/api/users/{userId}/posts")
+//    public Post addPost(@PathVariable Long userId, @Valid @RequestBody Post post){
+//        post.setUser(userRepository.findById(userId).get());
+//        return postRepository.save(post);
+//    }
 }
