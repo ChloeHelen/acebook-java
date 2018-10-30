@@ -20,7 +20,9 @@ class PostForm extends React.Component {
             body: JSON.stringify({
                 content: this.state.content
             })
-        })
+        }).then(() => {
+            this.props.apiCall();
+        });
 
     }
 
