@@ -7,7 +7,6 @@ import lombok.Data;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.util.Optional;
 
 @Data
 @Entity
@@ -17,12 +16,12 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String content;
 
-    public Post(){}
+    protected Post() {
+    }
 
-    private Post(String content) {
+    public Post(String content) {
         this.content = content;
     }
 

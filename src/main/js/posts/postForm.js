@@ -2,7 +2,7 @@ import React from "react";
 
 class PostForm extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.state = {
@@ -22,7 +22,9 @@ class PostForm extends React.Component {
             })
         }).then(() => {
             this.props.apiCall();
-            this.setState({content: ""});
+            this.setState({
+                content: ""
+            });
         });
     }
 
