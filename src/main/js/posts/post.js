@@ -1,4 +1,5 @@
 import React from 'react';
+const dateFormat = require('dateformat');
 
 const Post = (props) => {
     return (
@@ -7,10 +8,10 @@ const Post = (props) => {
                 {props.post.content}
             </p>
 			<p className='post-time'>
-                {props.post.createdAt}
+                {dateFormat(props.post.createdAt, "dddd, mmmm dS, yyyy, h:MM:ss TT")}
             </p>
         </div>
     )
-}
+};
 
 export default Post;
