@@ -6,12 +6,13 @@ import com.makersacademy.acebook.model.User;
 import com.makersacademy.acebook.repository.PostRepository;
 import com.makersacademy.acebook.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class PostController {
@@ -21,6 +22,18 @@ public class PostController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @GetMapping("/api/posts")
+    public List<Post> getAllPosts(){
+        List<Post> posts = new ArrayList<>();
+        postRepository.findAll().forEach(posts::add);
+        return posts;
+    }
+
+    @PostMapping("/api/posts")
+    public void postPost(){
+        System.out.println("Hiiiiii");
+    }
 
 //    @PostMapping("/api/users/{userId}/posts")
 //    public Post addPost(@PathVariable Long userId, @Valid @RequestBody Post post){
