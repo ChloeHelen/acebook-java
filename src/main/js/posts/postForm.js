@@ -6,7 +6,7 @@ class PostForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.state = {
-            content: ''
+            content: ""
         }
     }
 
@@ -35,7 +35,7 @@ class PostForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input name='content' type="text" value={this.state.content} onChange={this.handleChange}/>
+                <textarea name='content' value={this.state.content} onChange={this.handleChange}/>
                 <button>Post</button>
             </form>
         )
