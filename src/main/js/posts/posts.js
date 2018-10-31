@@ -13,9 +13,9 @@ class Posts extends React.Component {
                 <h1 className='posts-title'>
                     Posts
                 </h1>
-                <div className='posts-items'>
+                <p className='posts-items'>
                     {this.getPosts()}
-                </div>
+                </p>
             </article>
         )
     }
