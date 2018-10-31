@@ -20,7 +20,9 @@ class PostsBuilder extends React.Component {
 
     apiCall() {
         client({method: 'GET', path: '/api/posts'}).then(response => {
-            this.setState({posts: response.entity._embedded.posts});
+            this.setState({
+                posts: response.entity._embedded.posts.reverse()
+            });
         });
     }
 
