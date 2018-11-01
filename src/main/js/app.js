@@ -12,7 +12,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <div>
                     <SignUpBuilder/>
                 </div>
@@ -20,7 +20,7 @@ class App extends React.Component {
                 <div>
                     <PostsBuilder/>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
