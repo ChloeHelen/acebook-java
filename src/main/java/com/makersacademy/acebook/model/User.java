@@ -22,6 +22,14 @@ public class User {
     @Size(min = 6)
     private String password;
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     protected User() {}
 
     public Long getId() {
