@@ -22,7 +22,6 @@ class PostsBuilder extends React.Component {
         client({method: 'GET', path: '/api/posts'}).then(response => {
             this.setState({
                 posts: response.entity.reverse()
-
             });
         });
     }
