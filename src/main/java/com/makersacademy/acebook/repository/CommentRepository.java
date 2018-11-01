@@ -1,15 +1,12 @@
 package com.makersacademy.acebook.repository;
 
-import com.makersacademy.acebook.model.Post;
+import com.makersacademy.acebook.model.Comment;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface PostRepository extends CrudRepository<Post, Long> {
-
-    //    List<Post> findByUserId(Long userId);
-    List<Post> findAll();
+public interface CommentRepository extends CrudRepository<Comment, Long> {
+    List<Comment> findByPostId(Long postId);
 }
-

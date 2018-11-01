@@ -13,3 +13,21 @@
 .post-content {
     white-space: pre-line;
 }
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+}
+
+header {
+    background-color: #3B5998;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.text-box {
+    border-color: black;
+    border-width: 3px;
+}

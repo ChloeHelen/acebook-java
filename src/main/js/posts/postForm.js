@@ -35,7 +35,9 @@ class PostForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <textarea value={this.state.content} onChange={this.handleChange}/>
+
+                <textarea className='text-box' name='content' value={this.state.content} onChange={this.handleChange}/>
+
                 <button>Post</button>
             </form>
         )
