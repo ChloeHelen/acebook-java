@@ -49,7 +49,8 @@ class SignUpBuilder extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className='sign-up' onSubmit={this.handleSubmit}>
+                <h1 className='sign-up-text'>Sign up</h1>
                 <input type='text' onChange={this.handleChangeName} value={this.state.name} placeholder='name' required/>
                 <input type='email' onChange={this.handleChangeEmail} value={this.state.email} placeholder='email' required/>
                 <input type='password' onChange={this.handleChangePassword} value={this.state.password} placeholder='password' required/>

@@ -3,7 +3,6 @@
 }
 
 .post-main {
-    border: 1px solid #999;
     padding: 0.5rem;
     text-align: left;
     margin-bottom: 0.5rem;
@@ -29,10 +28,56 @@ header h1 {
 
 .text-box {
     border-color: black;
-    border-width: 3px;
+    border-width: 2px;
+    alignment: left;
+    margin-left: 150px;
+    margin-bottom: 5px;
+    width: 350px;
+    height: 150px;
 }
 
-/*.posts-items {*/
-    /*padding: 20px 50px 0px */
-    /**/
-/*}*/
+.post-btn {
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.comments-items {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.comments-all {
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+    background-color: aliceblue;
+}
+
+.post-container {
+    font-family: Arial, sans-serif;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.sign-up {
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+
+.post-time {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.sign-up-text {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.submit-text {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-left: 150px;
+}

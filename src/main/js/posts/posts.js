@@ -11,9 +11,6 @@ class Posts extends React.Component {
     render() {
         return (
             <article className='posts-main'>
-                <h1 className='posts-title'>
-                    Posts
-                </h1>
                 <p className='posts-items'>
                     {this.getPosts()}
                 </p>
@@ -24,7 +21,7 @@ class Posts extends React.Component {
     getPosts() {
         return this.props.posts.map(post => {
             return (
-                <div>
+                <div className='post-container'>
                     <Post post={post}/>
                     <CommentsBuilder post={post}/>
                 </div>

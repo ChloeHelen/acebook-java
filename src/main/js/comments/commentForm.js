@@ -38,6 +38,7 @@ class CommentForm extends React.Component {
         return (
             <form onSubmit={this.handleCmtSubmit}>
                 <textarea className='comment-text' name='comment' value={this.state.comment} onChange={this.handleCmtChange}/>
+                <br/>
                 <button>Comment</button>
             </form>
         )
