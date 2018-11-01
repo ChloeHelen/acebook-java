@@ -31,8 +31,8 @@ public class PostController {
     }
 
     @PostMapping("/api/posts")
-    public void postPost(){
-        System.out.println("Hiiiiii");
+    public Post createPost(@Valid @RequestBody Post post) {
+        return postRepository.save(post);
     }
 
 //    @PostMapping("/api/users/{userId}/posts")
