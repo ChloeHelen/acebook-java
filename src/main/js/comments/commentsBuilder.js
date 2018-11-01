@@ -1,5 +1,6 @@
 import React from 'react';
 import Comments from "./comments";
+import CommentForm from "./commentForm";
 
 const client = require('../client');
 
@@ -9,7 +10,8 @@ class CommentsBuilder extends React.Component {
         super(props);
         this.cmtApiCall = this.cmtApiCall.bind(this);
         this.state = {
-            comments: []
+            comments: [],
+            postId: this.props.post.id
         };
     }
 
@@ -29,6 +31,7 @@ class CommentsBuilder extends React.Component {
         return (
             <div>
                 <Comments comments={this.state.comments}/>
+                <CommentForm postId={this.state.postId} cmtApiCall={this.cmtApiCall} />
             </div>
         )
     }

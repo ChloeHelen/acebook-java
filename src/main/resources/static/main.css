@@ -14,7 +14,7 @@
     white-space: pre-line;
 }
 
-h1 {
+.web-head {
     font-family: 'Titillium Web', sans-serif;
     color: white;
 }
@@ -31,3 +31,8 @@ header h1 {
     border-color: black;
     border-width: 3px;
 }
+
+/*.posts-items {*/
+    /*padding: 20px 50px 0px */
+    /**/
+/*}*/
