@@ -1,7 +1,7 @@
 import PostsBuilder from "./posts/postsBuilder";
+import SignUpBuilder from "./sign-up/signUpBuilder";
 const React = require('react');
 const ReactDOM = require('react-dom');
-
 
 
 class App extends React.Component {
@@ -13,7 +13,13 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <PostsBuilder />
+                <div>
+                    <SignUpBuilder/>
+                </div>
+
+                <div>
+                    <PostsBuilder/>
+                </div>
             </div>
         )
     }

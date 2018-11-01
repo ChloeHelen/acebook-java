@@ -8,7 +8,7 @@ class PostsBuilder extends React.Component {
 
     constructor(props) {
         super(props);
-        this.apiCall = this.apiCall.bind(this)
+        this.apiCall = this.apiCall.bind(this);
         this.state = {
             posts: []
         };
