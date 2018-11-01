@@ -7,7 +7,7 @@ class CommentsBuilder extends React.Component {
 
     constructor(props) {
         super(props);
-        this.cmtApiCall = this.cmtApiCall.bind(this)
+        this.cmtApiCall = this.cmtApiCall.bind(this);
         this.state = {
             comments: []
         };
@@ -18,7 +18,7 @@ class CommentsBuilder extends React.Component {
     }
 
     cmtApiCall() {
-        client({method: 'GET', path: '/api/posts/'+postId+'/comments'}).then(response => {
+        client({method: 'GET', path: '/api/posts/'+ this.props.post.id +'/comments'}).then(response => {
             this.setState({
                 comments: response.entity
             });

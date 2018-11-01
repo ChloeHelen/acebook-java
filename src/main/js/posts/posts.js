@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './post'
+import CommentsBuilder from "../comments/commentsBuilder";
 
 class Posts extends React.Component {
     constructor(props) {
@@ -21,9 +22,14 @@ class Posts extends React.Component {
     }
 
     getPosts() {
-        return this.props.posts.map(post =>
-            <Post post={post}/>
-        );
+        return this.props.posts.map(post => {
+            return (
+                <div>
+                    <Post post={post}/>
+                    <CommentsBuilder post={post}/>
+                </div>
+            )
+        });
     }
 }
 
