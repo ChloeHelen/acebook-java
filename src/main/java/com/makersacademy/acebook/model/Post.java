@@ -1,12 +1,13 @@
 package com.makersacademy.acebook.model;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 
 @Data
 @Entity
@@ -17,6 +18,9 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
+    @Column(name = "created_at")
+    @CreationTimestamp
+    private Date createdAt;
 
     protected Post() {
     }
