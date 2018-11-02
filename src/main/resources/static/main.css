@@ -1,83 +1,116 @@
+:root {
+    --border-color: #dddfe2;
+    --background-color: #e9ebee;
+}
+
+button {
+    background: #f5f6f7;
+    border-radius: 17px;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    font-weight: bold;
+    transition: background-color 0.8s;
+}
+
+button:hover {
+    background: #d4d5d6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--background-color);
+}
+
 .posts-main {
     border-collapse: collapse;
 }
 
 .post-main {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     padding: 0.5rem;
     text-align: left;
-    margin-bottom: 0.5rem;
-    overflow: paged-x;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .post-content {
     white-space: pre-line;
+    font-size: 24px;
+    overflow: auto;
 }
 
 .web-head {
     font-family: 'Titillium Web', sans-serif;
     color: white;
-}
-
-header {
+    padding: 5px 30px;
     background-color: #3B5998;
-}
-
-header h1 {
     margin: 0;
 }
-
+textarea {
+    resize: none;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
 .text-box {
-    border-color: black;
-    border-width: 2px;
-    alignment: left;
-    margin-left: 150px;
-    margin-bottom: 5px;
+    border: 1px solid var(--border-color);
     width: 350px;
     height: 150px;
 }
 
-.post-btn {
-    margin-left: 150px;
-    margin-bottom: 20px;
-}
-
-.comments-items {
-    font-family: Arial, sans-serif;
-    font-size: 10px;
+.comment-content {
+    font-size: 12px;
 }
 
 .comments-all {
     padding-bottom: 20px;
     padding-left: 50px;
     padding-top: 20px;
-    background-color: aliceblue;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.comment-text {
+    width: 300px;
+    height: 70px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    margin-bottom: 7px;
 }
 
 .post-container {
-    font-family: Arial, sans-serif;
-    border: 1px solid #999;
-    margin-bottom: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
+    border: 1px solid var(--border-color);
+    margin: 10px auto;
+    width: 75%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
-.sign-up {
-    margin-left: 150px;
-    padding-bottom: 50px;
+.sign-up-form, .post-form {
+    width: fit-content;
+    margin: auto;
+}
+
+.sign-up-form > input {
+    display: block;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+.sign-up-form > h1 {
+    text-align: center;
 }
 
 .post-time {
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 10px;
 }
 
-.sign-up-text {
-    font-family: Arial, sans-serif;
+.sign-up-text, .submit-text {
     font-size: 20px;
-}
-
-.submit-text {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    margin-left: 150px;
 }

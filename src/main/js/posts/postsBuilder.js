@@ -28,10 +28,10 @@ class PostsBuilder extends React.Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <PostForm apiCall={this.apiCall}/>
                 <Posts posts={this.state.posts}/>
-            </div>
+            </React.Fragment>
         )
     }
 
