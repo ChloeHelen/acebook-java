@@ -52,6 +52,7 @@ body {
 textarea {
     resize: none;
     border: 1px solid var(--border-color);
+    padding: 10px;
 }
 .text-box {
     border: 1px solid var(--border-color);
@@ -59,8 +60,8 @@ textarea {
     height: 150px;
 }
 
-.comments-items {
-    font-size: 10px;
+.comment-content {
+    font-size: 12px;
 }
 
 .comments-all {
