@@ -10,9 +10,15 @@ button {
     cursor: pointer;
     border: 1px solid var(--border-color);
     font-weight: bold;
+    transition: background-color 0.8s;
+}
+
+button:hover {
+    background: #d4d5d6;
 }
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     background: var(--background-color);
 }
@@ -26,7 +32,6 @@ body {
     border-top-right-radius: 5px;
     padding: 0.5rem;
     text-align: left;
-    overflow: paged-x;
     background-color: #fff;
     border-bottom: 1px solid var(--border-color);
 }
@@ -34,6 +39,7 @@ body {
 .post-content {
     white-space: pre-line;
     font-size: 24px;
+    overflow: auto;
 }
 
 .web-head {
@@ -54,7 +60,6 @@ textarea {
 }
 
 .comments-items {
-    font-family: Arial, sans-serif;
     font-size: 10px;
 }
 
@@ -76,7 +81,6 @@ textarea {
 }
 
 .post-container {
-    font-family: Arial, sans-serif;
     border: 1px solid var(--border-color);
     margin: 10px auto;
     width: 75%;
@@ -107,6 +111,5 @@ textarea {
 }
 
 .sign-up-text, .submit-text {
-    font-family: Arial, sans-serif;
     font-size: 20px;
 }
